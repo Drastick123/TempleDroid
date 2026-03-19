@@ -30,18 +30,18 @@ echo "Verificando TempleOS ISO..."
 if [ ! -f "$HOME/TempleOS.ISO" ]; then
     echo "TempleOS não encontrado. Baixando..."
     wget -O $HOME/TempleOS.ISO https://templeos.org/Downloads/TempleOS.ISO
-else
+    else
     echo "TempleOS já está baixado"
-    fi 
+      fi 
     echo "Verificando VNC Viewer..."
 if pm list packages | grep -q "com.realvnc.viewer.android"; then
     echo "VNC Viewer instalado"
 else
-    echo "VNC Viewer não instalado"
-    echo "Abrindo Play Store para instalar..."
+      echo "VNC Viewer não instalado"
+      echo "Abrindo Play Store para instalar..."
    am start -a android.intent.action.VIEW -d https://play.google.com/store/apps/details?id=com.realvnc.viewer.android
-  echo "Instale o app e depois volte aqui..."
-    read -p "Pressione ENTER quando terminar..."
+    echo "Instale o app e depois volte aqui..."
+     read -p "Pressione ENTER quando terminar..."
 fi
 echo " Iniciando TempleOS..."
 qemu-system-x86_64 \
@@ -62,18 +62,6 @@ echo " Tudo pronto! Hello wolrd! :)"``
 Faça a ativação do arquivo com o comando:
 
 ``chmod +x temple mv temple $PREFIX/bin/``
-
-Intale o RNVC VIEWER:
-
-``"echo "Verificando se o VNC Viewer está instalado..."
-if pm list packages | grep -q "com.realvnc.viewer.android"; then
-    echo "App encontrado! Abrindo conexão..."
- am start -a android.intent.action.VIEW -d vnc://127.0.0.1:5900
-else   echo "VNC Viewer não instalado!"
-    echo "Abrindo Play Store..."
-    am start -a android.intent.action.VIEW -d https://play.google.com/store/apps/details?id=com.realvnc.viewer.android
-  echo "Instale o app e rode o comando novamente."
-fi``
 
 # Uso
 

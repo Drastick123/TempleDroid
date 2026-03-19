@@ -8,6 +8,8 @@ https://ex3cutor76-v1.github.io/Math-info/Sistemas%20operacionais/TempleOS/index
 
 # Requisitos
 
+``pkg install wget``
+
 ``pkg update && pkg upgrade -y``
 
 ``pkg install root-repo``

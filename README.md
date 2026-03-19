@@ -24,6 +24,11 @@ https://ex3cutor76-v1.github.io/Math-info/Sistemas%20operacionais/TempleOS/index
 
 
 # Instalação 
+
+primeiro terá que ser executado o comando:
+
+``nano $PREFIX/bin/temple``
+após insto cole o seguinte comando nele:
 ```
 #!/data/data/com.termux/files/usr/bin/bash
 echo "Verificando TempleOS ISO..."

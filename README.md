@@ -23,7 +23,7 @@ https://ex3cutor76-v1.github.io/Math-info/Sistemas%20operacionais/TempleOS/index
 
 # Instalação 
 
-Instale a iso:
+Instale a ISO:
 
 ``wget https://templeos.org/Downloads/TempleOS.ISO``
 
@@ -47,11 +47,13 @@ echo "Abrindo VNC automaticamente..."
 am start -a android.intent.action.VIEW -d vnc://127.0.0.1:5900
 EOF``
 
+Faça a ativação do arquivo com o comando:
+
+``chmod +x temple mv temple $PREFIX/bin/``
+
 Intale o RNVC VIEWER:
 
 ``am start -a android.intent.action.VIEW -d https://play.google.com/store/apps/details?id=com.realvnc.viewer.android``
-
-Dê permissão ao arquivo .sh: chmod +x Temple.sh
 
 # Uso
 

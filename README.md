@@ -50,7 +50,6 @@ qemu-system-x86_64 \
 
 echo "Aguardando servidor VNC iniciar..."
 
-# Espera até a porta 5900 abrir
 while ! nc -z 127.0.0.1 5900; do
     sleep 1
 done
@@ -70,6 +69,12 @@ Após isso salve com Ctrl + O e depois Ctrl + X
 
 Dê permissão ao arquivo .sh: chmod +x Temple.sh
 
+# Uso
+
 Ai após isso só abrir o servidor com o: ``./Temple.sh``
 
-E abrir o VNC viewer 
+E abrir o VNC viewer.
+
+Créditos:
+
+

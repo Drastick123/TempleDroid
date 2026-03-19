@@ -8,22 +8,50 @@ https://ex3cutor76-v1.github.io/Math-info/Sistemas%20operacionais/TempleOS/index
 
 # Requisitos
 
+``pkg update && pkg upgrade -y``
+
 ``pkg install root-repo``
+
+``pkg install netcat-openbsd``
 
 ``pkg install x11-repo``
 
 ``pkg install qemu-system-x86_64 ``
 
-``pkg install netcat-openbsd``
 
 
 
 # Instalação 
 
-Atualize o sistema: ``pkg update && pkg upgrade -y``
-
 Instale a iso:
 ``wget https://templeos.org/Downloads/TempleOS.ISO``
+
+Execute o comando para criar um arquivo executável 
+
+``cat > temple << 'EOF'
+#!/data/data/com.termux/files/usr/bin/bash
+
+echo "Iniciando TempleOS..."
+
+qemu-system-x86_64 \
+-m 512M \
+-cpu qemu64 \
+-cdrom $HOME/TempleOS.ISO \
+-boot d \
+-vga std \
+-vnc 127.0.0.1:0 &
+
+echo "Aguardando VNC iniciar..."
+
+while ! nc 127.0.0.1 5900 >/dev/null 2>&1; do
+    sleep 1
+done
+
+echo "Abrindo VNC automaticamente..."
+
+am start -a android.intent.action.VIEW -d vnc://127.0.0.1:5900
+
+EOF``
 
 Intale o RNVC VIEWER:
 

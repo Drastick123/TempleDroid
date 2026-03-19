@@ -15,7 +15,7 @@ pkg install root-repo``
 
 ``pkg install qemu-system-x86_64 ``
 
-``wget termux-api netcat-openbsd -y``
+``pkg install netcat-openbsd``
 
 
 

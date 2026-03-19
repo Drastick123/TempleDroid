@@ -65,9 +65,8 @@ Faça a ativação do arquivo com o comando:
 
 # Uso
 
-Ai após isso só abrir o servidor com o: ``./Temple.sh``
+Ai após isso só abrir o servidor com o: ``temple``
 
-E abrir o VNC viewer.
 
 Créditos:
 

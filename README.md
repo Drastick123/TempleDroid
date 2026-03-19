@@ -24,9 +24,10 @@ https://ex3cutor76-v1.github.io/Math-info/Sistemas%20operacionais/TempleOS/index
 # Instalação 
 
 Instale a iso:
+
 ``wget https://templeos.org/Downloads/TempleOS.ISO``
 
-Execute o comando para criar um arquivo executável 
+Execute o comando para criar um arquivo temple
 
 ``cat > temple << 'EOF'
 #!/data/data/com.termux/files/usr/bin/bash

@@ -25,53 +25,8 @@ Atualize o sistema: ``pkg update && pkg upgrade -y``
 
 Instale a iso: ``wget https://templeos.org/Downloads/TempleOS.ISO``
 
-Crie um arquivo sh: ``touch Temple.sh``
-
-Dentro do arquivo coloque esse script:
-
-echo "Abrindo página para instalar VNC Viewer..."
-am start -a android.intent.action.VIEW -d https://play.google.com/store/apps/details?id=com.realvnc.viewer.android
-
-echo "Aguarde instalar o app e volte aqui..."
-sleep 10
-
-echo "Baixando TempleOS..."
-wget -O TempleOS.ISO https://templeos.org/Downloads/TempleOS.ISO
-
-echo "Criando comando automático..."
-
-cat > temple << 'EOF'
-#!/data/data/com.termux/files/usr/bin/bash
-
-echo "Iniciando TempleOS (64 bits)..."
-
-qemu-system-x86_64 \
--m 512M \
--cpu qemu64 \
--cdrom $HOME/TempleOS.ISO \
--boot d \
--vga std \
--usb -device usb-kbd \
--vnc 127.0.0.1:0 &
-
-echo "Aguardando servidor VNC iniciar..."
-
-while ! nc -z 127.0.0.1 5900; do
-    sleep 1
-done
-
-echo "Servidor VNC ativo! Abrindo app..."
-
-am start -a android.intent.action.VIEW -d vnc://127.0.0.1:5900
-
-EOF
-
-chmod +x temple
-mv temple $PREFIX/bin/
-
-echo "Tudo pronto! Use: ./Temple.sh
-
-Após isso salve com Ctrl + O e depois Ctrl + X
+Rode o comando para ser levado para a página da Playstore 
+``am start -a android.intent.action.VIEW -d https://play.google.com/store/apps/details?id=com.realvnc.viewer.android``
 
 Dê permissão ao arquivo .sh: chmod +x Temple.sh
 

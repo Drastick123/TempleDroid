@@ -25,39 +25,46 @@ https://ex3cutor76-v1.github.io/Math-info/Sistemas%20operacionais/TempleOS/index
 
 # Instalação 
 
-``#!/data/data/com.termux/files/usr/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 echo "Verificando TempleOS ISO..."
-if [ ! -f "$HOME/TempleOS.ISO" ]; then
-    echo "TempleOS não encontrado. Baixando..."
-    wget -O $HOME/TempleOS.ISO https://templeos.org/Downloads/TempleOS.ISO
-    else
-    echo "TempleOS já está baixado"
-      fi 
-    echo "Verificando VNC Viewer..."
-if pm list packages | grep -q "com.realvnc.viewer.android"; then
-    echo "VNC Viewer instalado"
+if [[ ! -f "$HOME/TempleOS.ISO" ]]; then
+echo "TempleOS não encontrado. Baixando..."
+wget -O $HOME/TempleOS.ISO https://templeos.org/Downloads/TempleOS.ISO
 else
-      echo "VNC Viewer não instalado"
-      echo "Abrindo Play Store para instalar..."
-   am start -a android.intent.action.VIEW -d https://play.google.com/store/apps/details?id=com.realvnc.viewer.android
-    echo "Instale o app e depois volte aqui..."
-     read -p "Pressione ENTER quando terminar..."
+echo "TempleOS já está baixado"
+fi
+
+echo "Verificando VNC Viewer..."
+if pm list packages | grep -q "com.realvnc.viewer.android"; then
+echo "VNC Viewer instalado"
+else
+echo "VNC Viewer não instalado"
+echo "Abrindo Play Store para instalar..."
+am start -a android.intent.action.VIEW -d https://play.google.com/store/apps/details?id=com.realvnc.viewer.android
+echo "Instale o app e depois volte aqui..."
+read -p "Pressione ENTER quando terminar..."
 fi
 echo " Iniciando TempleOS..."
 qemu-system-x86_64 \
 -m 512M \
--cpu qemu64 \
+-cpu max \
 -cdrom $HOME/TempleOS.ISO \
 -boot d \
 -vga std \
+-device usb-tablet \
 -vnc 127.0.0.1:0 &
-echo " Aguardando VNC iniciar..."
+
+echo "Aguardando VNC..."
+
 while ! nc 127.0.0.1 5900 >/dev/null 2>&1; do
-    sleep 1
+sleep 1
 done
+
+sleep 2
+
 echo " Conectando automaticamente..."
 am start -a android.intent.action.VIEW -d vnc://127.0.0.1:5900
-echo " Tudo pronto! Hello wolrd! :)"``
+echo " Tudo pronto! Hello wolrd! :)"
 
 Faça a ativação do arquivo com o comando:
 

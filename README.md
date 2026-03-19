@@ -102,7 +102,7 @@ Após a instalação e configuração abra o servidor com o:
 
 ``temple``
 
-obs:o ``temple`` será ultilizado para executar o arquivo .sh que foi criado, então você so irá precisar por ele para rodar o script para abrir o servidor :)
+obs:o ``temple`` será ultilizado para executar o arquivo .sh que foi criado, então você só irá precisar por ele para rodar o script para abrir o servidor :)
 
 
 # Resumo:
@@ -116,6 +116,4 @@ Este projeto ainda está em desenvolvimento, então poderá ter erros e problema
 Espero que você consiga aproveitar para testar esse sistema maravilhoso chamado TempleOS ;)
 
 # Créditos:
-[Drastick123](https://github.com/Drastick123)
-
-[Ex3cutor76-V1](https://github.com/Ex3cutor76-V1)
+[Drastick123](https://github.com/Drastick123)      [Ex3cutor76-V1](https://github.com/Ex3cutor76-V1)

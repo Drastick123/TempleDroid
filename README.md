@@ -91,7 +91,7 @@ logo() {
   sleep 0.05
   echo "            ╚═════╝ ╚══════╝"
   echo ""
-  echo -e "${AZUL}TempleOS Virtual Machine Launcher Created by Drastick${RESET}"
+  echo -e "${AZUL}TempleOS Virtual Machine Launcher Created by Drastick & Ex3cutor76${RESET}"
   echo -e "${AMARELO}=========================================${RESET}"
   echo ""
 }

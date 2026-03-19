@@ -26,7 +26,7 @@ Atualize o sistema: ``pkg update && pkg upgrade -y``
 Instale a iso:
 ``wget https://templeos.org/Downloads/TempleOS.ISO``
 
-Rode o comando  no termux para ser levado para a página da Playstore
+Intale o RNVC VIEWER:
 
 ``am start -a android.intent.action.VIEW -d https://play.google.com/store/apps/details?id=com.realvnc.viewer.android``
 

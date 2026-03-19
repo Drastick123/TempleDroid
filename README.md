@@ -111,7 +111,7 @@ O comando instala A ISO do TempleOS e também leva automaticamente para a Playst
 
 # Atenção:
 
-Este projeto ainda está em desenvolvimento, então vai ter erros e problemas que poderão ser resolvidos em atualizações futuras. 
+Este projeto ainda está em desenvolvimento, então poderá ter erros e problemas que poderão ser resolvidos em atualizações futuras. 
 
 Espero que você consiga aproveitar para testar esse sistema maravilhoso chamado TempleOS ;)
 

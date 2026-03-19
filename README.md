@@ -25,30 +25,48 @@ https://ex3cutor76-v1.github.io/Math-info/Sistemas%20operacionais/TempleOS/index
 
 # Instalação 
 
-primeiro terá que ser executado o comando:
+primeiro execute  o comando:
 
 ``nano $PREFIX/bin/temple``
-após insto cole o seguinte comando nele:
+
+após insto cole o seguinte comando dentro dele:
 ```
 #!/data/data/com.termux/files/usr/bin/bash
-echo "Verificando TempleOS ISO..."
+
+echo " Verificando TempleOS ISO..."
 if [[ ! -f "$HOME/TempleOS.ISO" ]]; then
-echo "TempleOS não encontrado. Baixando..."
-wget -O $HOME/TempleOS.ISO https://templeos.org/Downloads/TempleOS.ISO
+  echo " TempleOS não encontrado. Baixando..."
+  wget -O $HOME/TempleOS.ISO https://templeos.org/Downloads/TempleOS.ISO
 else
-echo "TempleOS já está baixado"
+  echo " TempleOS já está baixado"
 fi
 
-echo "Verificando VNC Viewer..."
+echo " Verificando VNC Viewer..."
 if pm list packages | grep -q "com.realvnc.viewer.android"; then
-echo "VNC Viewer instalado"
+  echo " VNC Viewer instalado"
 else
-echo "VNC Viewer não instalado"
-echo "Abrindo Play Store para instalar..."
-am start -a android.intent.action.VIEW -d https://play.google.com/store/apps/details?id=com.realvnc.viewer.android
-echo "Instale o app e depois volte aqui..."
-read -p "Pressione ENTER quando terminar..."
+  echo " VNC Viewer não instalado"
+  echo " Abrindo Play Store..."
+  am start -a android.intent.action.VIEW -d https://play.google.com/store/apps/details?id=com.realvnc.viewer.android
+  echo "Instale o app e volte aqui..."
+  read -p "Pressione ENTER quando terminar..."
 fi
+
+# Mata QEMU antigo
+pkill qemu 2>/dev/null
+
+echo " Procurando porta VNC livre..."
+
+PORT=5900
+DISPLAY=0
+
+while nc -z 127.0.0.1 $PORT 2>/dev/null; do
+  PORT=$((PORT+1))
+  DISPLAY=$((DISPLAY+1))
+done
+
+echo " Porta livre: $PORT (display :$DISPLAY)"
+
 echo " Iniciando TempleOS..."
 qemu-system-x86_64 \
 -m 512M \
@@ -56,37 +74,44 @@ qemu-system-x86_64 \
 -cdrom $HOME/TempleOS.ISO \
 -boot d \
 -vga std \
--device usb-tablet \
--vnc 127.0.0.1:0 &
+-vnc 127.0.0.1:$DISPLAY &
 
-echo "Aguardando VNC..."
+echo " Aguardando VNC..."
 
-while ! nc 127.0.0.1 5900 >/dev/null 2>&1; do
-sleep 1
+while ! nc -z 127.0.0.1 $PORT 2>/dev/null; do
+  sleep 1
 done
 
 sleep 2
 
-echo " Conectando automaticamente..."
-am start -a android.intent.action.VIEW -d vnc://127.0.0.1:5900
-echo " Tudo pronto! Hello wolrd! :)"
+echo " Conectando..."
+
+am start -a android.intent.action.VIEW -d vnc://127.0.0.1:$PORT
+
+echo "TempleOS rodando :)"
 ```
+após ter copiado e colado o comando, salve e saia dele 
+
 # Uso
+
 Faça a ativação do arquivo com o comando:
 
-``chmod +x temple mv temple $PREFIX/bin/``
+``chmod +x $PREFIX/bin/temple``
 
 
 
 # Resumo:
-O comando instala A ISO do TempleOS e também leva automaticamente para a Playstore para fazer o download do RVNC VIEWER.
+
+O comando instala A ISO do TempleOS e também leva automaticamente para a Playstore para fazer o download do RVNC VIEWER, além de criar um servidor com uma porta de ip aleatório, após isto ele leva automaticamente para o RVNC VIEWER 
 
 # Atenção:
-Só é necessário executar o comando de instalação somente uma vez.
 
-Ai após isso só abrir o servidor com o: ``temple``
 
-Espero que você aproveite para testar esse sistema maravilhoso chamado TempleOS :)
+Após a instalação e configuração abra o servidor com o: 
+
+``temple``
+
+Espero que você aproveite para testar esse sistema maravilhoso chamado TempleOS ;)
 
 # Créditos:
 

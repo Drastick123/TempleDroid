@@ -116,4 +116,6 @@ Este projeto ainda está em desenvolvimento, então poderá ter erros e problema
 Espero que você consiga aproveitar para testar esse sistema maravilhoso chamado TempleOS ;)
 
 # Créditos:
-[Drastick123](https://github.com/Drastick123)      [Ex3cutor76-V1](https://github.com/Ex3cutor76-V1)
+[Drastick123](https://github.com/Drastick123)    
+
+[Ex3cutor76-V1](https://github.com/Ex3cutor76-V1)

@@ -24,7 +24,7 @@ https://ex3cutor76-v1.github.io/Math-info/Sistemas%20operacionais/TempleOS/index
 
 
 # Instalação 
-
+```
 #!/data/data/com.termux/files/usr/bin/bash
 echo "Verificando TempleOS ISO..."
 if [[ ! -f "$HOME/TempleOS.ISO" ]]; then
@@ -71,7 +71,7 @@ Faça a ativação do arquivo com o comando:
 ``chmod +x temple mv temple $PREFIX/bin/``
 
 # Uso
-
+```
 Ai após isso só abrir o servidor com o: ``temple``
 
 

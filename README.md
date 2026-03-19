@@ -53,7 +53,15 @@ Faça a ativação do arquivo com o comando:
 
 Intale o RNVC VIEWER:
 
-``am start -a android.intent.action.VIEW -d https://play.google.com/store/apps/details?id=com.realvnc.viewer.android``
+``"echo "Verificando se o VNC Viewer está instalado..."
+if pm list packages | grep -q "com.realvnc.viewer.android"; then
+    echo "App encontrado! Abrindo conexão..."
+ am start -a android.intent.action.VIEW -d vnc://127.0.0.1:5900
+else   echo "VNC Viewer não instalado!"
+    echo "Abrindo Play Store..."
+    am start -a android.intent.action.VIEW -d https://play.google.com/store/apps/details?id=com.realvnc.viewer.android
+  echo "Instale o app e rode o comando novamente."
+fi``
 
 # Uso
 

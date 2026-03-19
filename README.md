@@ -236,18 +236,13 @@ Após a instalação e configuração abra o servidor com o:
 
 ``temple``
 
-obs:o ``temple`` será ultilizado para executar o arquivo .sh que foi criado, então você só irá precisar por ele para rodar o script para abrir o servidor :)
-
-
-# Resumo:
-
-O comando instala A ISO do TempleOS e também leva automaticamente para a Playstore para fazer o download do RVNC VIEWER, além de criar um servidor com uma porta de ip aleatório, após isto ele leva automaticamente para o RVNC VIEWER 
+obs:o ``temple`` será ultilizado para executar o arquivo .sh que foi criado, então você só irá precisar por ele para rodar o script :)
 
 # Atenção:
 
-Este projeto ainda está em desenvolvimento, então poderá ter erros e problemas que poderão ser resolvidos em atualizações futuras. 
+Este projeto ainda está em desenvolvimento, então poderá ter erros e problemas que poderão ser resolvidos em atualizações futuras.
 
-Espero que você consiga aproveitar para testar esse sistema maravilhoso chamado TempleOS ;)
+Espero que você consiga aproveitar para testar esse sistema maravilhoso chamado TempleOS ;) i love it!
 
 # Créditos:
 [Drastick123](https://github.com/Drastick123)    

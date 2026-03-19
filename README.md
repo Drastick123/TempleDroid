@@ -8,13 +8,15 @@ https://ex3cutor76-v1.github.io/Math-info/Sistemas%20operacionais/TempleOS/index
 
 # Requisitos
 
-``pkg install root-repo
+``
+pkg install root-repo``
 
-pkg install x11-repo
+``pkg install x11-repo``
 
-pkg install qemu-system-x86_64 
+``pkg install qemu-system-x86_64 ``
 
-wget termux-api netcat-openbsd -y``
+``wget termux-api netcat-openbsd -y``
+
 
 
 # Instalação 

@@ -72,8 +72,13 @@ Faça a ativação do arquivo com o comando:
 
 # Uso
 ```
+#Resumo:O comando instala A ISO do TempleOS e também leva automaticamente para a Playstore para fazer o download do RVNC VIEWER.
+
+#Atenção:Só é necessário executar o comando de instalação somente uma vez.
+
 Ai após isso só abrir o servidor com o: ``temple``
 
+Espero que você aproveite para testar esse sistema maravilhoso chamado TempleOS :)
 
 Créditos:
 

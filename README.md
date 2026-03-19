@@ -65,13 +65,14 @@ sleep 2
 echo " Conectando automaticamente..."
 am start -a android.intent.action.VIEW -d vnc://127.0.0.1:5900
 echo " Tudo pronto! Hello wolrd! :)"
-
+```
+# Uso
 Faça a ativação do arquivo com o comando:
 
 ``chmod +x temple mv temple $PREFIX/bin/``
 
-# Uso
-```
+
+
 # Resumo:
 O comando instala A ISO do TempleOS e também leva automaticamente para a Playstore para fazer o download do RVNC VIEWER.
 

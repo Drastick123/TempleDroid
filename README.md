@@ -98,6 +98,11 @@ Faça a ativação do arquivo com o comando:
 
 ``chmod +x $PREFIX/bin/temple``
 
+Após a instalação e configuração abra o servidor com o: 
+
+``temple``
+
+obs:o ``temple`` será ultilizado para executar o arquivo .sh que foi criado, então você so irá precisar por ele para rodar o script para abrir o servidor :)
 
 
 # Resumo:
@@ -106,12 +111,9 @@ O comando instala A ISO do TempleOS e também leva automaticamente para a Playst
 
 # Atenção:
 
+Este projeto ainda está em desenvolvimento, então vai ter erros e problemas que poderão ser resolvidos em atualizações futuras. 
 
-Após a instalação e configuração abra o servidor com o: 
-
-``temple``
-
-Espero que você aproveite para testar esse sistema maravilhoso chamado TempleOS ;)
+Espero que você consiga aproveitar para testar esse sistema maravilhoso chamado TempleOS ;)
 
 # Créditos:
 

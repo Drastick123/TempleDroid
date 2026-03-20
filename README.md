@@ -54,7 +54,7 @@ loading_bar() {
   echo ""
 }
 
-# ===== LOGO BONITA =====
+# ===== LOGO =====
 logo() {
   clear
   echo -e "${AMARELO}=========================================${RESET}"
@@ -170,7 +170,7 @@ start_vm() {
   am start -a android.intent.action.VIEW -d vnc://127.0.0.1:$PORT
 }
 
-# ===== FUNÇÃO PARA ABRIR PLAY STORE MANUALMENTE =====
+# ===== FUNÇÃO PARA ABRIR PLAY STORE MANUALMENTE :| =====
 open_playstore() {
   echo -e "${AMARELO}Abrindo Play Store para instalar o RVNC Viewer...${RESET}"
   am start -a android.intent.action.VIEW -d https://play.google.com/store/apps/details?id=com.realvnc.viewer.android

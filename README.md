@@ -1,5 +1,5 @@
 # TempleDroid
-Recentemente descobri uma forma de usar o TempleOS no termux em uma VM, então eu quis compartilhar isso aqui, que inclusive meu amigo, [Ex3cutor76-V1](https://github.com/Ex3cutor76-V1) me ajudou com essa ideia.
+Recentemente descobri uma forma de usar o TempleOS no termux em uma VM, então eu quis compartilhar isso aqui, que inclusive meu amigo, [Ex3cutor76-V1](https://github.com/Ex3cutor76-V1) me ajudou com essa ideia e também criou uma versão simplificada do TempleDroid ;) [Templex](https://github.com/Ex3cutor76-V1/Templex)
 
 # O que é o TempleOS
 

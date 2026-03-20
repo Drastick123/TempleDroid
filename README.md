@@ -31,7 +31,7 @@ primeiro execute  o comando:
 
 após insto cole o seguinte comando dentro dele:
 ```
-#!/data/data/com.termux/files/usr/bin/bash
+    #!/data/data/com.termux/files/usr/bin/bash
 
 # ===== CORES =====
 AZUL='\033[1;34m'
@@ -43,11 +43,6 @@ RESET='\033[0m'
 RAM_DEFAULT=512
 ISO="$HOME/TempleOS.ISO"
 CONFIG_FILE="$HOME/.temple_config"
-
-# ===== SOM =====
-play_sound() {
-  termux-media-player play /system/media/audio/ui/Effect_Tick.ogg 2>/dev/null
-}
 
 # ===== LOADING BAR =====
 loading_bar() {
@@ -130,7 +125,6 @@ start_vm() {
   fi
 
   logo
-  play_sound
   loading_bar
 
   echo -e "${AZUL}Verificando ISO...${RESET}"
@@ -236,7 +230,7 @@ Após a instalação e configuração abra o servidor com o:
 
 ``temple``
 
-obs:o ``temple`` será ultilizado para executar o arquivo .sh que foi criado, então você só irá precisar por ele para rodar o script :)
+obs:o ``temple`` será ultilizado para executar o arquivo .sh que foi criado, então depois de fazer a instalação e configuração você só irá precisar por ele para rodar o script :)
 
 # Atenção:
 

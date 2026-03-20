@@ -226,7 +226,7 @@ Faça a ativação do arquivo com o comando:
 
 ``chmod +x $PREFIX/bin/temple``
 
-Após a instalação e configuração abra o servidor com o: 
+Após a instalação e configuração abra o Launcher com o: 
 
 ``temple``
 
